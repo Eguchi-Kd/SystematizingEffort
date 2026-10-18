@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // GitHub Pages SPA redirect
+      var path = window.location.pathname;
+      var repo = '/SystematizingEffort/';
+      if (path !== repo && path.startsWith(repo)) {
+        var route = path.slice(repo.length - 1);
+        sessionStorage.setItem('redirect', route);
+      }
+      window.location.replace(repo);
+    </script>
+  </head>
+</html>
